@@ -1,0 +1,22 @@
+{
+  "expo": {
+    "name": "Hamburgueria App",
+    "slug": "hamburgueria-app",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "light",
+    "assetBundlePatterns": ["**/*"],
+    "ios": {
+      "supportsTablet": true
+    },
+    "android": {
+      "package": "com.hamburgueria.app"
+    },
+    "web": {
+      "bundler": "metro",
+      "output": "static"
+    },
+    "plugins": ["expo-router"],
+    "scheme": "hamburgueria-app"
+  }
+}
