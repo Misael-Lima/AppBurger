@@ -19,20 +19,11 @@ export default function ConfirmacaoScreen() {
   const nomeHamburguer = params.nomeHamburguer as string;
   const precoTotal = parseFloat(params.precoTotal as string);
 
-  const voltarAoMenu = () => {
-    router.push("/");
-  };
-
-  const fazerNovoPedido = () => {
-    router.push("/");
-  };
-
   return (
     <ScrollView style={styles.container}>
       <StatusBar style="light" />
 
       <View style={styles.sucessoHeader}>
-        <Text style={styles.sucessoEmoji}>✅</Text>
         <Text style={styles.sucessoTitulo}>Pedido Confirmado!</Text>
         <Text style={styles.sucessoSubtitulo}>
           Seu pedido foi recebido com sucesso
@@ -84,17 +75,10 @@ export default function ConfirmacaoScreen() {
         <Text style={styles.tempoTexto}>30 a 45 minutos</Text>
       </View>
 
-      <View style={styles.botoesContainer}>
-        <TouchableOpacity
-          style={styles.botaoSecundario}
-          onPress={fazerNovoPedido}
-        >
-          <Text style={styles.textoBotaoSecundario}> Fazer Novo Pedido</Text>
-        </TouchableOpacity>
-
-        <TouchableOpacity style={styles.botaoPrimario} onPress={voltarAoMenu}>
-          <Text style={styles.textoBotaoPrimario}> Voltar ao Menu</Text>
-        </TouchableOpacity>
+      <View style={styles.agradecimento}>
+        <Text style={styles.agradecimentoTexto}>
+          Obrigado!
+        </Text>
       </View>
     </ScrollView>
   );
@@ -109,10 +93,6 @@ const styles = StyleSheet.create({
     backgroundColor: "#4CAF50",
     padding: 30,
     alignItems: "center",
-  },
-  sucessoEmoji: {
-    fontSize: 60,
-    marginBottom: 15,
   },
   sucessoTitulo: {
     fontSize: 24,
@@ -225,39 +205,14 @@ const styles = StyleSheet.create({
     color: "#856404",
     marginBottom: 5,
   },
-  tempoObservacao: {
-    fontSize: 14,
-    color: "#856404",
-    textAlign: "center",
-  },
-  botoesContainer: {
-    padding: 15,
-    gap: 10,
-  },
-  botaoPrimario: {
-    backgroundColor: "#FF6B35",
-    padding: 15,
-    borderRadius: 8,
-    alignItems: "center",
-  },
-  textoBotaoPrimario: {
-    color: "#fff",
-    fontSize: 16,
-    fontWeight: "bold",
-  },
-  botaoSecundario: {
-    backgroundColor: "#4CAF50",
-    padding: 15,
-    borderRadius: 8,
-    alignItems: "center",
-  },
-  textoBotaoSecundario: {
-    color: "#fff",
-    fontSize: 16,
-    fontWeight: "bold",
-  },
   agradecimento: {
     padding: 20,
     alignItems: "center",
+  },
+  agradecimentoTexto: {
+    fontSize: 16,
+    color: "#666",
+    textAlign: "center",
+    fontStyle: "italic",
   },
 });
